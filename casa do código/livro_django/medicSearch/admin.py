@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import *
 
-class PofileAdmin(admin.ModelAdmin):
+class ProfileAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_at'
 
 # Register your models here.
