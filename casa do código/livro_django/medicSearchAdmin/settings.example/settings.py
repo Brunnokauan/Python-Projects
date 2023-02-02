@@ -140,3 +140,24 @@ AUTHENTICATION_BACKENDS = [
 
 SOCIAL_AUTH_FACEBOOK_KEY = "Código ID do Aplicativo" # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = "Chave Secreta do Aplicativo" # App Secret
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'Seu ID de cliente'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'Sua chave secreta de cliente'
+
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email', 'user_link']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email, picture.type(large), link'
+}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = [
+    ('name', 'name'),
+    ('email', 'email'),
+    ('picture', 'picture'),
+    ('link', 'profile_url'),
+]
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.outlook.com'
+EMAIL_HOST_USER = 'seu e-mail'
+EMAIL_HOST_PASSWORD = 'sua senha'
+EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMIAL_USE_SSL = False
