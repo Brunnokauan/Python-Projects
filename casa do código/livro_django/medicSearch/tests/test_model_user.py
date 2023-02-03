@@ -7,4 +7,4 @@ class UserModelTestClass(TestCase):
 
     def test_user_exist(self):
         user = User.objects.first()
-        self.assertIsNone(user)
+        self.assertIsNotNone(user)
